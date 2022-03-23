@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/1.8" fx:controller="guesoft.controller.LoginTelaController">
+    <stylesheets>
+        <URL value="@/guesoft/style/logintela.css" />
+    </stylesheets>
+   <children>
+      <GridPane layoutX="36.0" layoutY="37.0" prefHeight="279.0" prefWidth="514.0" AnchorPane.bottomAnchor="84.0" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="37.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="252.0" minWidth="10.0" prefWidth="124.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="401.0" minWidth="10.0" prefWidth="390.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="256.0" text="Nome">
+               <font>
+                  <Font name="Cambria" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfNome" onKeyPressed="#atualiza" onKeyReleased="#atualiza" promptText="Digite o seu nome" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Cambria Italic" size="12.0" />
+               </font>
+            </TextField>
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="254.0" text="Curso" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Cambria" size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="124.0" text="Email ou tel" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Cambria" size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="122.0" text="Turma" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Cambria" size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="123.0" text="Senha" GridPane.rowIndex="5">
+               <font>
+                  <Font name="Cambria" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfContacto" promptText="fulano@algo.com ou 9xxxxxxxx" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="tfTurma" promptText="Digite a turma" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <ChoiceBox fx:id="cbCursos" prefHeight="28.0" prefWidth="386.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <PasswordField fx:id="pfSenha" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <children>
+                  <RadioButton fx:id="rbMasc" mnemonicParsing="false" prefHeight="46.0" prefWidth="192.0" text="Masculino" />
+                  <RadioButton fx:id="rbFem" mnemonicParsing="false" prefHeight="45.0" prefWidth="197.0" text="Feminino" />
+               </children>
+            </HBox>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="123.0" text="Sexo" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Cambria" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <Label fx:id="lbMagia" layoutX="248.0" layoutY="14.0" text="Novo Aluno">
+         <font>
+            <Font name="Cambria" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btCadastra" layoutX="243.0" layoutY="337.0" mnemonicParsing="false" onAction="#cadastra" prefHeight="32.0" prefWidth="101.0" text="Cadastrar" />
+   </children>
+</AnchorPane>
